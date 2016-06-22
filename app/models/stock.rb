@@ -26,3 +26,5 @@ class Stock < ActiveRecord::Base
 		'Unavailable'
 	end
 end
+
+

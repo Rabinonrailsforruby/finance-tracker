@@ -5,12 +5,12 @@
 				<div class="col-md-10">
 					<%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: true, class: 'form-control search-box input-lg' %>
 				</div>
-					<div class="col-md-2">
-						<%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
+				<div class="col-md-2">
+					<%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
 						<i class="fa fa-search"></i> Look up a stock
-						<% end %>
-					</div>
+					<% end %>
 				</div>
+			</div>
 		<% end %>
 		
 		<%= render 'common/spinner' %>
@@ -30,11 +30,10 @@
 							10 stocks
 						<% end %>
 						<% if current_user.stock_already_added?(@stock.ticker) %>
-						this stock
+							this stock
 						<% end %>
-						</span>
+					</span>
 				<% end %>
-				
 			</div>
 		<% end %>
 		<div id="stock-lookup-errors">
